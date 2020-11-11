@@ -65,9 +65,66 @@ print('============== 문자열 객체는 변경할 수 없다(immutable) ======
 # print(str1)
 
 print('============== 문자열 연산: 슬라이싱 ================')
+str6 = str2[2:5]
+print(str6)
 
+str7 = str2[2:]
+print(str7)
+
+str8 = str2[:]
+print(str8)
 
 print('============== 문자열 연산: 객체 함수================')
+# 대소문자 관련 함수
+s = 'i like Python'
+print(s.upper())
+print(s.lower())
+print(s.swapcase())
+print(s.capitalize())
+print(s.title())
+
+# 검색 관련 함수
+s = 'I Like Python, I Like Deep Learning Also'
+print(s.count("Like"))
+print(s.find("Like"))
+print(s.find("Like", 5))
+print(s.find("AI"))
+print(s.rfind("Like"))
+try:
+    print(s.index("AI"))
+except ValueError as e:
+    print('index() 함수는 발견하지 못하면 예외가 발생한다.')
+print(s.rindex("Like"))
+print(s.startswith("I Like"))
+print(s.endswith("Also"))
+print(s.endswith("Python", 0, 13))
+
+# 편집및 치환
+s = '       spam and ham      '
+print('----' + s.strip() + '----')
+print('----' + s.rstrip() + '----')
+print('----' + s.lstrip() + '----')
+
+s = '<><><abc><><defg><><>'
+print('----' + s.strip('<>') + '----')
+
+s = 'Hello Java Java Java'
+print(s.replace('Java', 'Python'))
+
+# 분리
+s = 'one:two:three'
+r = s.split(':')
+print(r, type(r))
+
+
+
+
+
+
+
+
+
+
 
 
 print('============== 문자열 연산: 포맷팅================')
