@@ -3,45 +3,17 @@
 
 nums = [5, 9, 3, 8, 60, 20, 1]
 
+print('Before Sort.')
 for num in nums:
     print(num, end=' ')
 else:
     print()
 
-
-# 정렬 알고리즘 구현
-#1
-# 5 9 3 8 60 20 1
-# 9 5 3 8 60 20 1
-# 9 5 8 3 60 20 1
-# 9 5 8 60 3 20 1
-# 9 5 8 60 20 3 1
-#
-# #2
-# 9 5 8 60 20 3 1
-# 9 8 5 60 20 3 1
-# 9 8 60 5 20 3 1
-# 9 8 60 20 5 3 1
-#
-# #3
-# 9 8 60 20 5 3 1
-# 9 60 8 20 5 3 1
-# 9 60 20 8 5 3 1
-#
-# #4
-# 9 60 20 8 5 3 1
-# 60 9 20 8 5 3 1
-# 60 20 9 8 5 3 1
-#
-# #5
-# 60 20 9 8 5 3 1
-#
-# #6
-# 60 20 9 8 5 3 1
-#
-# #7
-# 60 20 9 8 5 3 1
-
+count = len(nums)
+for i in range(count):
+    for j in range(count-1):
+        if nums[j] < nums[j+1]:
+            nums[j], nums[j+1] = nums[j+1], nums[j]
 
 print("After Sort.")
 for num in nums:

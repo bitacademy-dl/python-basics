@@ -4,6 +4,17 @@
 def frange(val, base=0.0, step=0.1):
     results = []
 
+    if val < base:
+        start = val
+        stop = base
+    else:
+        start = base
+        stop = val
+
+    while start < stop:
+        results.append(start)
+        start += step
+
     return results
 
 
