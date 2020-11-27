@@ -1,6 +1,7 @@
 # test for Add
 try:
     from add import Add
+    from multiply import Multiply
 except ImportError as e:
     print(e)
 
